@@ -120,13 +120,13 @@ const scoreInfoHTML = `<div class="score-table">
 
 const authorInfoHTML = `<div class="author-info">
 <h2>information about game author</h2>
-<p>Game Tester - Sofia Nilga</p>
-<p>Author Idea - Sofia Nilga</p>
-<p>Game Designer - Sofia Nilga</p>
-<p>Game Developer - Sofia Nilga</p>
-<p>Dialog Developer - Sofia Nilga</p>
-<p>Script Developer - Sofia Nilga</p>
-<p>Frontend Developer - Sofia Nilga</p>
+<p>Game Tester - Sophia Nilga</p>
+<p>Author Idea - Sophia Nilga</p>
+<p>Game Designer - Sophia Nilga</p>
+<p>Game Developer - Sophia Nilga</p>
+<p>Dialog Developer - Sophia Nilga</p>
+<p>Script Developer - Sophia Nilga</p>
+<p>Frontend Developer - Sophia Nilga</p>
 </div>`
 
 function generateBG() {
