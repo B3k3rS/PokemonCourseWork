@@ -1,0 +1,262 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap'); 
+
+/* normilize */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+}
+
+body {
+    min-width: 100vw;
+    min-height: 98vh;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*  */
+.game-container {
+    padding-top: 350px;
+}
+
+.main-menu-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgb(151, 41, 41);
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50% 50% 50% 0%;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    border: 3px solid #fff
+}
+
+/* main menu */
+.main-menu {
+    padding: 300px auto 0;
+}
+
+.main-menu a {
+    width: 100%;
+    height: 100%;
+}
+
+.main-menu li{
+    width: 250px;
+    height: 40px;
+    font-size: 26px;
+    text-transform: uppercase;
+    margin: 20px auto;
+    border: 2px solid #eee;
+    border-radius: 10px;
+    color: #eee;
+    background: #535353;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* game */
+
+.battle-board, .score-table, .author-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 70%;
+    height: 900px;
+    margin: 0 auto;
+    background: #bd9132;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50px;
+    border: 8px solid #6C523E;
+}
+
+.pokemon-card {
+    width: 300px;
+    text-align: center;
+    background: #f1d59b;
+    border: 5px solid #6C523E;
+    padding-top: 10px;
+    border-radius: 30px;
+}
+
+.pokemon-card img{
+    border: 5px solid #6C523E;
+    background: #b18767;
+    border-radius: 50%;
+    width: 80%;
+    padding: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.pokemon-card h2 {
+    margin-bottom: 20px;
+    color: #6C523E;
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+.hp-bar {
+    position: relative;
+    margin-top: 50px;
+    width: 80%;
+    height: 12px;
+    background: gray;
+    margin: 0 auto;
+    font-size: 12px;
+    line-height: 12px;
+    color: #eee;
+    font-weight: bold;
+    border-radius: 6px;
+    margin-bottom: 30px;
+}
+
+.hp-bar > div {
+    background: #148614;
+    width: 50%;
+    height: 100%;
+    border-radius: 4px;
+    
+}
+
+.hp-bar > div > p {
+    position: absolute;
+    top: 0;
+    left: 46%;
+}
+
+.center-block {
+    width: 25%;    
+    text-align: center;
+}
+
+
+.attack-button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.attack-button > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 40px;
+    background: #f1d59b;
+    margin: 10px 0;
+    text-transform: uppercase;
+    color: #6C523E;
+    font-weight: 600;
+    border: 3px solid #6C523E;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.center-block h3 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.fight-log {
+    width: 100%;
+    height: 200px;
+    overflow: hidden scroll;
+    background: #f1d59b;
+    border-radius: 20px;
+    border: 3px solid #6C523E;
+    text-align: left;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+.fight-log > p {
+    padding: 5px 0 0 0;
+}
+
+
+.score-table {
+    display: block;
+    overflow: hidden scroll ;
+}
+
+.score-table::-webkit-scrollbar {
+    display: none;
+} 
+
+.score-table h2 {
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 30px;
+    color: #eee;
+    font-size: 30px;
+    width: 100%;
+}
+
+.score-list {
+    margin: 0 auto;
+    width: 80%;
+    margin-top: 35px;
+    text-align: center;
+}
+
+.score-list p {
+    font-weight: 600;
+    color: #eee;
+    font-size: 26px;
+    padding: 5px 0;
+    letter-spacing: 0.04cm
+}
+
+.author-info {
+    display: block;
+    padding-top: 50px;
+}
+
+.author-info p {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    color: #eee;
+    letter-spacing: 0.04cm;
+    padding: 5px 0;
+    font-size: 30px;
+}
+
+.author-info h2 {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    color: #eee;
+    letter-spacing: 0.06cm;
+
+    padding: 5px 0;
+    font-size: 40px;
+    text-transform: uppercase;
+    text-decoration: underline;
+    margin-bottom: 30px;
+}
