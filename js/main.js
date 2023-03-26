@@ -48,20 +48,20 @@ class Pokemon {
 
     getDamage(dmg) {
         this.hp -= dmg;
-        if (this.hp > 0) return `${this.name} пропускает удар и получает ${dmg} урона!`
-        return `${this.name} пропускает удар и падает без сознания! ${this.name} повержен!`
+        if (this.hp > 0) return `${this.name} misses a hit and takes ${dmg} damage!`
+        return `${this.name} misses a blow and falls unconscious! ${this.name} is defeated!`
     }
 
     getBigDamage(dmg) {
         this.hp -= Math.floor(dmg * 1.2);
-        if (this.hp > 0) return `${this.name} пропускает тяжелый удар и получает ${dmg} урона!`
-        return `${this.name} пропускает тяжелый удар и падает без сознания! ${this.name} повержен!`
+        if (this.hp > 0) return `${this.name} misses a heavy hit and takes ${dmg} damage!`
+        return `${this.name} misses a heavy blow and falls unconscious! ${this.name} is defeated!`
     }
 
     healed(heal) {
         this.hp += heal;
         if (this.hp > 100) this.hp = 100
-        return `${this.name} обливает рану исцеляющим зельем и восстанавливает здоровье! Новый показатель здоровья ${this.name}: ${this.hp} HP! `
+        return `${this.name} douses the wound with a healing potion and restores health! New health indicator ${this.name}: ${this.hp} HP! `
     }
 }
 
@@ -246,7 +246,7 @@ gameScore = localStorage.getItem('gameScore') ? localStorage.getItem('gameScore'
 
 
 function playerDie() {
-    alert(`${gameHero.name} погиб! Игра окончена!\nКоличество побеждённых врагов: ${gameScore}.`)
+    alert(`${gameHero.name} die! Game Over!\nNumber of enemies defeated: ${gameScore}.`)
     localStorage.removeItem('GameHero')
     localStorage.removeItem('GameEnemy')
     localStorage.removeItem('gameProgress')
@@ -352,7 +352,7 @@ heroAtkBtn2.addEventListener('click', () => {
 
     // 20% miss
     if (Math.floor(Math.random()*9) < 2 ) {
-        battleComment(`Пока ${gameHero.name} замахивался, чтобы нанести тяжелый удар, ${gameEnemy.name} успел увернуться от удара!`)
+        battleComment(`While ${gameHero.name} was swinging to land a heavy blow, ${gameEnemy.name} managed to dodge the blow!`)
     }
     else {
         // def
@@ -385,7 +385,7 @@ heroHealBtn.addEventListener('click', () => {
 
     // enemy miss 50%
     if (Math.floor(Math.random()*10) % 2 == 0) {
-        battleComment(`Зелье, которым ${gameHero.name} обрабатывал рану дополнительно увеличило ловкрость, что позволило ${gameHero.name} увернуться от атаки врага!`)
+        battleComment(`The potion used by ${gameHero.name} to heal the wound has additionally increased agility, allowing ${gameHero.name} to dodge an enemy attack!`)
     }
     else {
         enemyAttack()
