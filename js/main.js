@@ -146,9 +146,31 @@ function loadScoreTable() {
     } 
 }
 
+function battleComment(str) {
+    fightLogDiv = document.querySelector(`.fight-log`)
+    newLog = document.createElement('p');
+    newLog.textContent = str;
+    fightLogDiv.appendChild(newLog)
+    fightLogDiv.scrollTop = fightLogDiv.scrollHeight
+}
+
 function generateEnemy() {
     randmonPokemonId = Math.floor(Math.random()*9);
     gameEnemy = new enemy(pokemonList[randmonPokemonId][0],pokemonList[randmonPokemonId][2],pokemonList[randmonPokemonId][1])
+
+    spawnPokemonReplic = [
+        `Walking through the forest, the hero meets ${gameEnemy.name} and enters into a fight with him.`,
+        `After defeating the enemy, ${gameEnemy.name} jumps out of the bushes at the hero and aggressively grins.`,
+        `On the way, the hero notices a branch with a piece of wool, taking out a sword and looking into the bushes, the hero finds ${gameEnemy.name} sitting in ambush and enters into battle with him.`,
+        `During the evening dinner, ${gameEnemy.name} picked up the smell of meat and attacked the hero to get a fragrant piece of meat.`,
+        `Leaning down to the river to replenish water supplies, the hero loses his vigilance and is attacked by ${gameEnemy.name}, drinking water nearby.`
+    ]
+
+    try {
+        battleComment(spawnPokemonReplic[Math.floor(Math.random()*4)])
+    } catch (error) {
+        console.log(error)
+    }
 }
 
 if (!isHaveProgress) {    
@@ -184,13 +206,8 @@ else {
 gameContainer.style = `padding-top: 100px;`
 gameContainer.innerHTML = gameTableHTML;
 
-fightLogDiv = document.querySelector(`.fight-log`)
-function battleComment(str) {
-    newLog = document.createElement('p');
-    newLog.textContent = str;
-    fightLogDiv.appendChild(newLog)
-    fightLogDiv.scrollTop = fightLogDiv.scrollHeight
-}
+
+
 
 
 GameHeroBackup = JSON.parse(localStorage.getItem('GameHero'))
